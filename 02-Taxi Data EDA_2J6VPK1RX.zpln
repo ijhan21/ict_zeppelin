@@ -1,0 +1,105 @@
+{
+  "paragraphs": [
+    {
+      "text": "%pyspark\nfrom pyspark.sql import SparkSession\n\nspark \u003d SparkSession.builder.appName(\"trip_count_sql\").getOrCreate()\nspark",
+      "user": "anonymous",
+      "dateUpdated": "2023-07-29 17:17:48.332",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003cpyspark.sql.session.SparkSession object at 0x7f022ea05fd0\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1690618542839_1079886245",
+      "id": "paragraph_1690618542839_1079886245",
+      "dateCreated": "2023-07-29 17:15:42.839",
+      "dateStarted": "2023-07-29 17:17:48.347",
+      "dateFinished": "2023-07-29 17:17:49.562",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\n# 디렉토리 지정\ndirectory\u003d\"/home/ubuntu/working/spark-examples/data\"\ntrip_files\u003d\"trips/*\" # trips 디렉토리 내의 모든 파일을 불러오기\nzone_file \u003d\"taxi+_zone_lookup.csv\"\n\ntrips_df \u003d spark.read.csv(f\"file://{directory}/{trip_files}\", inferSchema\u003dTrue, header\u003dTrue)\nzone_df  \u003d spark.read.csv(f\"file://{directory}/{zone_file}\", inferSchema\u003dTrue, header\u003dTrue)",
+      "user": "anonymous",
+      "dateUpdated": "2023-07-29 17:20:02.735",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1690618668340_1414479644",
+      "id": "paragraph_1690618668340_1414479644",
+      "dateCreated": "2023-07-29 17:17:48.340",
+      "dateStarted": "2023-07-29 17:20:02.744",
+      "status": "RUNNING"
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-07-29 17:20:02.738",
+      "progress": 0,
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1690618802738_808982394",
+      "id": "paragraph_1690618802738_808982394",
+      "dateCreated": "2023-07-29 17:20:02.738",
+      "status": "READY"
+    }
+  ],
+  "name": "02-Taxi Data EDA",
+  "id": "2J6VPK1RX",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.10.1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

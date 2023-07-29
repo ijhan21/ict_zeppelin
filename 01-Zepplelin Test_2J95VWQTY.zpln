@@ -1,0 +1,631 @@
+{
+  "paragraphs": [
+    {
+      "text": "%pyspark\nfrom pyspark.sql import SparkSession\n\nspark \u003d SparkSession.builder.appName(\"trip_count\").getOrCreate()\nspark",
+      "user": "anonymous",
+      "dateUpdated": "2023-07-29 17:05:46.432",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003cpyspark.sql.session.SparkSession object at 0x7f022e320760\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1690615148365_1605336103",
+      "id": "paragraph_1690615148365_1605336103",
+      "dateCreated": "2023-07-29 16:19:08.365",
+      "dateStarted": "2023-07-29 17:05:46.443",
+      "dateFinished": "2023-07-29 17:05:49.260",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\n\ntrip_file_path \u003d \"/home/ubuntu/working/spark-examples/data/fhvhv_tripdata_2020-03.csv\"\ntrip_data \u003d spark.read.csv(f\"file:///{trip_file_path}\", inferSchema\u003dTrue, header\u003dTrue)\ntrip_data.show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-07-29 17:06:06.324",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------------+--------------------+-------------------+-------------------+------------+------------+-------+\n|hvfhs_license_num|dispatching_base_num|    pickup_datetime|   dropoff_datetime|PULocationID|DOLocationID|SR_Flag|\n+-----------------+--------------------+-------------------+-------------------+------------+------------+-------+\n|           HV0005|              B02510|2020-03-01 00:03:40|2020-03-01 00:23:39|          81|         159|   null|\n|           HV0005|              B02510|2020-03-01 00:28:05|2020-03-01 00:38:57|         168|         119|   null|\n|           HV0003|              B02764|2020-03-01 00:03:07|2020-03-01 00:15:04|         137|         209|      1|\n|           HV0003|              B02764|2020-03-01 00:18:42|2020-03-01 00:38:42|         209|          80|   null|\n|           HV0003|              B02764|2020-03-01 00:44:24|2020-03-01 00:58:44|         256|         226|   null|\n|           HV0003|              B02682|2020-03-01 00:17:23|2020-03-01 00:39:35|          79|         263|   null|\n|           HV0003|              B02764|2020-03-01 00:01:18|2020-03-01 00:38:52|          61|          29|   null|\n|           HV0003|              B02764|2020-03-01 00:43:27|2020-03-01 00:47:27|         150|         150|      1|\n|           HV0003|              B02764|2020-03-01 00:52:23|2020-03-01 01:00:15|         150|         210|   null|\n|           HV0003|              B02764|2020-03-01 00:19:49|2020-03-01 00:23:40|          60|         167|   null|\n|           HV0003|              B02764|2020-03-01 00:29:34|2020-03-01 00:39:19|          47|         213|   null|\n|           HV0003|              B02764|2020-03-01 00:41:44|2020-03-01 00:58:13|         213|         235|   null|\n|           HV0003|              B02765|2020-03-01 00:11:26|2020-03-01 00:24:46|         243|         153|   null|\n|           HV0003|              B02765|2020-03-01 00:28:05|2020-03-01 00:38:56|         127|          18|   null|\n|           HV0003|              B02765|2020-03-01 00:44:28|2020-03-01 00:52:09|          18|         169|   null|\n|           HV0003|              B02765|2020-03-01 00:56:50|2020-03-01 00:59:26|          94|         169|   null|\n|           HV0003|              B02764|2020-03-01 00:56:14|2020-03-01 01:03:38|         211|         158|   null|\n|           HV0003|              B02764|2020-03-01 00:14:15|2020-03-01 00:26:47|         246|         107|   null|\n|           HV0003|              B02764|2020-03-01 00:31:38|2020-03-01 00:58:07|         234|           9|   null|\n|           HV0005|              B02510|2020-03-01 00:26:31|2020-03-01 00:38:07|         139|          10|      1|\n+-----------------+--------------------+-------------------+-------------------+------------+------------+-------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-30-105.ap-northeast-2.compute.internal:4040/jobs/job?id\u003d0"
+            },
+            {
+              "jobUrl": "http://ip-172-31-30-105.ap-northeast-2.compute.internal:4040/jobs/job?id\u003d1"
+            },
+            {
+              "jobUrl": "http://ip-172-31-30-105.ap-northeast-2.compute.internal:4040/jobs/job?id\u003d2"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1690615242995_1070069565",
+      "id": "paragraph_1690615242995_1070069565",
+      "dateCreated": "2023-07-29 16:20:42.995",
+      "dateStarted": "2023-07-29 17:06:06.333",
+      "dateFinished": "2023-07-29 17:07:02.799",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\ntrip_data.createOrReplaceTempView(\"trip_data\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-07-29 17:07:57.401",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "lineChart",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "hvfhs_license_num": "string",
+                      "dispatching_base_num": "string",
+                      "pickup_datetime": "string",
+                      "dropoff_datetime": "string",
+                      "PULocationID": "string",
+                      "DOLocationID": "string",
+                      "SR_Flag": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "hvfhs_license_num",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "dispatching_base_num",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1690615244589_206195439",
+      "id": "paragraph_1690615244589_206195439",
+      "dateCreated": "2023-07-29 16:20:44.589",
+      "dateStarted": "2023-07-29 17:07:57.422",
+      "dateFinished": "2023-07-29 17:07:57.640",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\nquery \u003d \"\"\"\nselect split(pickup_datetime, \u0027 \u0027)[0] as pickup_date, count(*) as trips\nfrom trip_data\ngroup by pickup_date\n\"\"\"\ndatetime_pickup_date \u003d spark.sql(query)\ndatetime_pickup_date",
+      "user": "anonymous",
+      "dateUpdated": "2023-07-29 17:10:42.978",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "DataFrame[pickup_date: string, trips: bigint]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1690617992592_1437247121",
+      "id": "paragraph_1690617992592_1437247121",
+      "dateCreated": "2023-07-29 17:06:32.592",
+      "dateStarted": "2023-07-29 17:10:42.988",
+      "dateFinished": "2023-07-29 17:10:43.182",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\nz.show(datetime_pickup_date)",
+      "user": "anonymous",
+      "dateUpdated": "2023-07-29 17:12:08.755",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "pickup_date": "string",
+                      "trips": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "pickup_date",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "trips",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "pickup_date\ttrips\n2020-03-03\t697880\n2020-03-02\t648986\n2020-03-01\t784246\n2020-03-06\t872012\n2020-03-05\t731165\n2020-03-04\t707879\n2020-03-09\t628940\n2020-03-08\t731222\n2020-03-07\t886071\n2020-03-10\t626474\n2020-03-12\t643257\n2020-03-11\t628601\n2020-03-16\t391518\n2020-03-13\t660914\n2020-03-15\t448125\n2020-03-14\t569397\n2020-03-26\t141607\n2020-03-25\t141088\n2020-03-20\t261900\n2020-03-24\t141686\n2020-03-27\t159339\n2020-03-22\t162165\n2020-03-19\t252773\n2020-03-17\t312298\n2020-03-18\t269232\n2020-03-23\t162392\n2020-03-21\t215745\n2020-03-28\t138456\n2020-03-29\t115393\n2020-03-31\t129550\n2020-03-30\t132593\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-30-105.ap-northeast-2.compute.internal:4040/jobs/job?id\u003d6"
+            },
+            {
+              "jobUrl": "http://ip-172-31-30-105.ap-northeast-2.compute.internal:4040/jobs/job?id\u003d7"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1690618117167_877778209",
+      "id": "paragraph_1690618117167_877778209",
+      "dateCreated": "2023-07-29 17:08:37.167",
+      "dateStarted": "2023-07-29 17:10:56.978",
+      "dateFinished": "2023-07-29 17:11:46.001",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%sql\nselect * from trip_data limit 5;",
+      "user": "anonymous",
+      "dateUpdated": "2023-07-29 17:12:48.448",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "hvfhs_license_num": "string",
+                      "dispatching_base_num": "string",
+                      "pickup_datetime": "string",
+                      "dropoff_datetime": "string",
+                      "PULocationID": "string",
+                      "DOLocationID": "string",
+                      "SR_Flag": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "hvfhs_license_num\tdispatching_base_num\tpickup_datetime\tdropoff_datetime\tPULocationID\tDOLocationID\tSR_Flag\nHV0005\tB02510\t2020-03-01 00:03:40\t2020-03-01 00:23:39\t81\t159\tnull\nHV0005\tB02510\t2020-03-01 00:28:05\t2020-03-01 00:38:57\t168\t119\tnull\nHV0003\tB02764\t2020-03-01 00:03:07\t2020-03-01 00:15:04\t137\t209\t1\nHV0003\tB02764\t2020-03-01 00:18:42\t2020-03-01 00:38:42\t209\t80\tnull\nHV0003\tB02764\t2020-03-01 00:44:24\t2020-03-01 00:58:44\t256\t226\tnull\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-30-105.ap-northeast-2.compute.internal:4040/jobs/job?id\u003d8"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1690618256973_944794548",
+      "id": "paragraph_1690618256973_944794548",
+      "dateCreated": "2023-07-29 17:10:56.974",
+      "dateStarted": "2023-07-29 17:12:47.764",
+      "dateFinished": "2023-07-29 17:12:48.219",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%sql\nselect split(pickup_datetime, \u0027 \u0027)[0] as pickup_date, count(*) as trips\nfrom trip_data\ngroup by pickup_date",
+      "user": "anonymous",
+      "dateUpdated": "2023-07-29 17:14:25.972",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "stackedAreaChart",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "pickup_date": "string",
+                      "trips": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "pickup_date",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "trips",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "pickup_date\ttrips\n2020-03-03\t697880\n2020-03-02\t648986\n2020-03-01\t784246\n2020-03-06\t872012\n2020-03-05\t731165\n2020-03-04\t707879\n2020-03-09\t628940\n2020-03-08\t731222\n2020-03-07\t886071\n2020-03-10\t626474\n2020-03-12\t643257\n2020-03-11\t628601\n2020-03-16\t391518\n2020-03-13\t660914\n2020-03-15\t448125\n2020-03-14\t569397\n2020-03-26\t141607\n2020-03-25\t141088\n2020-03-20\t261900\n2020-03-24\t141686\n2020-03-27\t159339\n2020-03-22\t162165\n2020-03-19\t252773\n2020-03-17\t312298\n2020-03-18\t269232\n2020-03-23\t162392\n2020-03-21\t215745\n2020-03-28\t138456\n2020-03-29\t115393\n2020-03-31\t129550\n2020-03-30\t132593\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://ip-172-31-30-105.ap-northeast-2.compute.internal:4040/jobs/job?id\u003d9"
+            },
+            {
+              "jobUrl": "http://ip-172-31-30-105.ap-northeast-2.compute.internal:4040/jobs/job?id\u003d10"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1690618367764_2126390997",
+      "id": "paragraph_1690618367764_2126390997",
+      "dateCreated": "2023-07-29 17:12:47.764",
+      "dateStarted": "2023-07-29 17:13:31.505",
+      "dateFinished": "2023-07-29 17:14:20.967",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\nspark.stop()\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-07-29 17:14:52.791",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1690618389597_1221544906",
+      "id": "paragraph_1690618389597_1221544906",
+      "dateCreated": "2023-07-29 17:13:09.597",
+      "dateStarted": "2023-07-29 17:14:52.795",
+      "dateFinished": "2023-07-29 17:14:53.248",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-07-29 17:14:52.794",
+      "progress": 0,
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1690618492794_1426498940",
+      "id": "paragraph_1690618492794_1426498940",
+      "dateCreated": "2023-07-29 17:14:52.794",
+      "status": "READY"
+    }
+  ],
+  "name": "01-Zepplelin Test",
+  "id": "2J95VWQTY",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.10.1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
