@@ -648,9 +648,45 @@
       "status": "FINISHED"
     },
     {
+      "text": "%pyspark\n# Data 정제\nquery \u003d \"\"\"\nSELECT *\nFROM comb c\nWHERE c.total_amount \u003c 5000\n  AND c.total_amount \u003e 0\n  AND c.passenger_count \u003c 5\n  AND c.pickup_date \u003e\u003d \u00272021-01-01\u0027\n  AND c.pickup_date \u003c \u00272021-08-01\u0027\n\"\"\"\n\ncleaned_df \u003d spark.sql(query)\ncleaned_df.createOrReplaceTempView(\"cleaned\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-07-29 17:44:32.505",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1690620126676_1689014027",
+      "id": "paragraph_1690620126676_1689014027",
+      "dateCreated": "2023-07-29 17:42:06.681",
+      "dateStarted": "2023-07-29 17:44:32.522",
+      "dateFinished": "2023-07-29 17:44:32.709",
+      "status": "FINISHED"
+    },
+    {
       "text": "%pyspark\n",
       "user": "anonymous",
-      "dateUpdated": "2023-07-29 17:42:06.681",
+      "dateUpdated": "2023-07-29 17:44:32.522",
       "progress": 0,
       "config": {},
       "settings": {
@@ -660,9 +696,9 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1690620126676_1689014027",
-      "id": "paragraph_1690620126676_1689014027",
-      "dateCreated": "2023-07-29 17:42:06.681",
+      "jobName": "paragraph_1690620272522_2096584306",
+      "id": "paragraph_1690620272522_2096584306",
+      "dateCreated": "2023-07-29 17:44:32.522",
       "status": "READY"
     }
   ],
